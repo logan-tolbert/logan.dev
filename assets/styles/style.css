@@ -88,35 +88,6 @@ header .logo {
   color: var(--accent-primary);
 }
 
-/* Mobile Navigation */
-@media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
-
-  #nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: var(--background-color);
-    text-align: center;
-    box-shadow: 0px 5px 10px var(--box-shadow-color);
-    transition: 0.3s ease-in-out;
-  }
-
-  #nav-links.open {
-    display: flex;
-  }
-
-  #nav-links li {
-    display: block;
-    padding: 15px;
-  }
-}
-
 #theme-toggle {
   position: absolute;
   top: 80px;
@@ -193,6 +164,14 @@ header .logo {
   text-align: center;
 }
 
+.about {
+  width: 60%;
+  margin: 0 auto;
+}
+.about p {
+  font-size: 1.2rem;
+}
+
 .skills {
   text-align: center;
   padding: 50px 20px;
@@ -232,6 +211,9 @@ header .logo {
 }
 
 /* Projects Section */
+.projects h2 {
+  margin-bottom: 1rem;
+}
 .project-list {
   display: flex;
   justify-content: center;
@@ -243,9 +225,10 @@ header .logo {
   background: var(--background-color);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px var(--box-shadow-color);
+  box-shadow: 0 4px 8px 0 var(--box-shadow-color),
+    0 6px 20px 0 var(--box-shadow-color);
   width: 300px;
-  transition: transform 0.3s;
+  transition: transform 0.5s;
   text-align: center;
 }
 
@@ -255,10 +238,23 @@ header .logo {
 
 .project-card img {
   width: 100%;
+  height: 250px;
   border-radius: 5px;
   margin-bottom: 10px;
 }
 
+.project-card p {
+  color: var(--accent-primary);
+}
+
+.project-card a {
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-primary);
+}
 /* Footer */
 footer {
   text-align: center;
@@ -325,4 +321,33 @@ footer {
 
 .dark-mode footer {
   background: var(--dark-background);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--background-color);
+    text-align: center;
+    box-shadow: 0px 5px 10px var(--box-shadow-color);
+    transition: 0.3s ease-in-out;
+  }
+
+  #nav-links.open {
+    display: flex;
+  }
+
+  #nav-links li {
+    display: block;
+    padding: 15px;
+  }
 }
