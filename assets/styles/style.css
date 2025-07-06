@@ -55,6 +55,8 @@
   --tag-radius: 1rem;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-hover: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-colors: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* RESET & BASE STYLES */
@@ -72,6 +74,11 @@ body {
   color: var(--darkest-gray);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+/* Disable transitions during theme changes */
+body.theme-transitioning * {
+  transition: none !important;
 }
 
 /* TYPOGRAPHY */
@@ -410,7 +417,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--card-radius);
   text-align: center;
   box-shadow: 0 4px 12px var(--shadow-light);
-  transition: var(--transition);
+  transition: var(--transition-hover);
 }
 
 .stat-card:hover {
@@ -456,7 +463,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--card-radius);
   text-align: center;
   box-shadow: 0 4px 12px var(--shadow-light);
-  transition: var(--transition);
+  transition: var(--transition-hover);
 }
 
 .skill-category:hover {
@@ -485,7 +492,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--pill-radius);
   font-size: 0.9rem;
   font-weight: 500;
-  transition: var(--transition);
+  transition: var(--transition-hover);
 }
 
 .skill-item:hover {
@@ -517,7 +524,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--card-radius);
   overflow: hidden;
   box-shadow: 0 4px 12px var(--shadow-light);
-  transition: var(--transition);
+  transition: var(--transition-hover);
 }
 
 .project-card:hover {
@@ -1174,6 +1181,26 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 120px;
 }
 
+/* DARK MODE UPDATES FOR FORM ELEMENTS */
+.dark-mode .form-input {
+  background: var(--white);
+  color: var(--darkest-gray);
+  border-color: var(--blue-lighter);
+}
+
+.dark-mode .form-input:focus {
+  border-color: var(--pink-bright);
+  box-shadow: 0 0 0 2px var(--shadow-pink-bright);
+}
+
+.dark-mode .contact-email-link {
+  color: var(--pink-bright);
+}
+
+.dark-mode .contact-email-link:hover {
+  color: var(--pink-bright-light);
+}
+
 .contact-email-link {
   color: var(--pink);
   text-decoration: none;
@@ -1191,7 +1218,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1rem;
 }
 
-/* CONTACT SUCCESS PAGE STYLES */
+/* CONTACT SUCCESS PAGE */
 .success-section {
   min-height: 60vh;
   display: flex;
@@ -1224,22 +1251,3 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
-/* DARK MODE UPDATES FOR FORM ELEMENTS */
-.dark-mode .form-input {
-  background: var(--white);
-  color: var(--darkest-gray);
-  border-color: var(--blue-lighter);
-}
-
-.dark-mode .form-input:focus {
-  border-color: var(--pink-bright);
-  box-shadow: 0 0 0 2px var(--shadow-pink-bright);
-}
-
-.dark-mode .contact-email-link {
-  color: var(--pink-bright);
-}
-
-.dark-mode .contact-email-link:hover {
-  color: var(--pink-bright-light);
-}

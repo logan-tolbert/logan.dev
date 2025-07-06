@@ -39,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Toggle dark mode
     themeToggle.addEventListener("click", () => {
+        // Temporarily disable transitions
+        body.classList.add("theme-transitioning");
+        
         body.classList.toggle("dark-mode");
         if (body.classList.contains("dark-mode")) {
             themeToggle.textContent = "🌞";
@@ -47,6 +50,11 @@ document.addEventListener("DOMContentLoaded", function () {
             themeToggle.textContent = "🌙";
             localStorage.setItem("theme", "light");
         }
+        
+        // Re-enable transitions after a short delay
+        setTimeout(() => {
+            body.classList.remove("theme-transitioning");
+        }, 100);
     });
 
     // Add scroll effect to navigation
@@ -87,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(el);
     });
 
-    // Fix: Set current year in footer
+    // Set current year in footer
     if (currentYear) {
         currentYear.textContent = new Date().getFullYear();
     }
