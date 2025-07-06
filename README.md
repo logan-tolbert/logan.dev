@@ -1,5 +1,7 @@
 # Logan Tolbert - Portfolio
 
+[![Deploy static content to Pages](https://github.com/logan-tolbert/logan.dev/actions/workflows/deploy.yml/badge.svg)](https://github.com/logan-tolbert/logan.dev/actions/workflows/deploy.yml)
+
 <!--TODO: add screenshot ![Website Preview](https://www.logan-tolbert.com/preview-image.png)   -->
 
 ## 🌐 Live Site
@@ -19,11 +21,22 @@ If you like this project, consider giving it a ⭐ on GitHub!
 - **Dark Mode Support** - Toggle between light and dark themes.
 - **Projects Section** - Highlights my best work with links to GitHub repositories.
 - **Contact Section** - Provides direct ways to reach out.
+- **Automated Deployment** - GitHub Actions workflow with CSS minification, image optimization, and link checking.
 
 ## 🛠️ Technologies Used
 
 - **HTML, CSS, JavaScript** - For the core structure, styling, and interactivity.
-- **GitHub Pages** (if applicable) - Hosting service for the portfolio.
+- **GitHub Pages** - Hosting service for the portfolio.
+- **GitHub Actions** - Automated deployment with build optimizations.
+
+## 🔧 Build Process
+
+The site uses an automated GitHub Actions workflow that:
+
+- **Minifies CSS** using clean-css-cli for faster loading
+- **Optimizes images** using imagemin for better performance
+- **Checks broken links** using lychee to ensure quality
+- **Deploys automatically** to GitHub Pages on every push to main
 
 ## 🖥️ Installation & Usage
 
