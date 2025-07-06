@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan Tolbert | Contact</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Logan Tolbert | Contact">
+    <meta property="og:description" content="Get in touch with Logan Tolbert – software developer passionate about building impactful solutions.">
+    <meta property="og:image" content="https://logan-tolbert.com/assets/images/preview.png">
+    <meta property="og:url" content="https:/logan-tolbert.com/contact">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Logan Tolbert Personal Portfolio">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Logan Tolbert | Contact">
+    <meta name="twitter:description" content="Get in touch with Logan Tolbert – software developer passionate about building impactful solutions.">
+    <meta property="og:url" content="https:/logan-tolbert.com/contact">
+    <meta name="twitter:image" content="https://logan-tolbert.com/assets/images/preview.png">
+    <meta name="twitter:site" content="@lodev205">
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <script defer src="../assets/scripts/script.js"></script>
+    <script defer src="../assets/scripts/contact-form.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo"><code>&lt;LoDev&gt;</code></div>
+                <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
+                <ul id="nav-links" class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="https://github.com/logan-tolbert?tab=repositories" target="_blank">Projects</a></li>
+                    <li><a href="./about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+
+    <!-- Main Content -->
+    <main>
+        <section class="contact" id="contact">
+            <div class="about-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="about-content" style="grid-template-columns: 1fr 1fr; gap: 3rem; align-items: flex-start;">
+                    <!-- Contact Form -->
+                    <div>
+                        <form class="contact-form" action="https://formspree.io/f/mnnvyoqg" method="POST">
+                            <input type="hidden" name="_subject" value="New message from portfolio site">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_replyto" value="">
+                            <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required style="padding: 0.75rem; border: 1px solid var(--medium-gray); border-radius: var(--button-radius);">
+                            </div>
+                            <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required style="padding: 0.75rem; border: 1px solid var(--medium-gray); border-radius: var(--button-radius);">
+                            </div>
+                            <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required style="padding: 0.75rem; border: 1px solid var(--medium-gray); border-radius: var(--button-radius);">
+                            </div>
+                            <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" required style="padding: 0.75rem; border: 1px solid var(--medium-gray); border-radius: var(--button-radius); resize: vertical;"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="about-text">
+                        <p class="about-description">Prefer to reach out directly? Feel free to drop me a line at
+                            <a href="mailto:lodev205@gmail.com" style="color: var(--pink); text-decoration: none;">lodev205@gmail.com</a>
+                            or connect with me on social media.
+                        </p>
+                        <div class="social-links" style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                            <a href="https://github.com/logan-tolbert" target="_blank" class="social-link">
+                                <span class="social-icon">📧</span>
+                                GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/logan-tolbert/" target="_blank" class="social-link">
+                                <span class="social-icon">💼</span>
+                                LinkedIn
+                            </a>
+                            <a href="https://x.com/lodev205" target="_blank" class="social-link">
+                                <span class="social-icon">🐦</span>
+                                Twitter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h2 class="footer-title">Thanks for Visiting!</h2>
+                    <p class="footer-subtitle">I look forward to connecting with you.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Logan Tolbert. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html> 
