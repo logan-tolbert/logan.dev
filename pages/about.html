@@ -24,21 +24,23 @@
     <meta name="twitter:image" content="https://logan-tolbert.com/assets/images/preview.png">
     <meta name="twitter:site" content="@lodev205">
 
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
     <link rel="stylesheet" href="../assets/styles/style.css">
     <script defer src="../assets/scripts/script.js"></script>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="logo"><code>&lt;LoDev&gt;</code></div>
-            <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
-            <ul id="nav-links" class="hidden">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="https://github.com/logan-tolbert?tab=repositories" target="_blank">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo"><code>&lt;LoDev&gt;</code></div>
+                <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
+                <ul id="nav-links" class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="https://github.com/logan-tolbert?tab=repositories" target="_blank">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -46,57 +48,57 @@
 
     <main>
         <section class="about">
-            <p>
-                Hello! I'm Logan Tolbert.<br />
-                I'm software developer based in a small town just outside Birmingham, AL.
-                With a deep love for technology, I find myself constantly inspired by the vast world of possibilities it
-                offers. The process of making something work from code, from the smallest lines to the larger systems,
-                is something that fascinates me. There's a certain magic in how it all comes together—how information
-                floats through the air, billions of processes happen simultaneously, and everything functions
-                seamlessly, often without us noticing. It feels almost impossible at times, but that's what makes it so
-                incredible.
-            </p>
-            <p>
-                Although my career is just beginning, I've always been captivated by how learning one concept opens up a
-                doorway to something new. This curiosity keeps me pushing my limits, as I continuously strive to
-                understand things I don't yet fully grasp. Every project, whether personal or professional, is a chance
-                to build upon what I know and explore new technology.
-            </p>
-            <p>
-                My future goals are to expand my knowledge into cloud technologies, DevOps, CI/CD, and containerization,
-                all while continuing to improve my proficiency in various coding languages. I'm excited about what's
-                next and how I can contribute to the evolving world of software development. Ultimately, I see every
-                challenge as an opportunity to learn, grow, and become a more capable developer.
-            </p>
-            <p>
-                Outside of software development, I'm passionate about music and gaming. I've been playing guitar for
-                years, and there's something deeply fulfilling about expressing creativity through music. As a heavy
-                metal enthusiast, I find inspiration in the intricate rhythms and powerful energy of the genre. Whether
-                I'm jamming out or discovering new bands, music is an important outlet for me.
-            </p>
-            <p>
-                I'm also a big fan of gaming, which gives me a chance to unwind and challenge myself. I appreciate the
-                strategic thinking, storytelling, and immersive worlds that games offer. It's another form of creativity
-                and problem-solving that helps keep my mind sharp and my imagination active.
-            </p>
-            <p>
-                I'm always open to new opportunities, collaborations, or just connecting with like-minded individuals
-                who share a passion for technology, creativity, or music. If you'd like to get in touch, whether it's
-                about a project, a conversation, or anything else, feel free to reach out through my contact page. Let's
-                connect and see how we can grow together!
-            </p>
+            <div class="about-container">
+                <div class="about-content">
+                    <div class="about-photo">
+                        <img src="../assets/images/profile.png" alt="Logan Tolbert" class="profile-img" />
+                    </div>
+                    <div class="about-text">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="section-divider"></div>
+                        <div class="about-description">
+                            <p>Hello! I'm Logan Tolbert, a software developer based just outside Birmingham, AL. I'm fascinated by engineering systems and making different pieces of code work together seamlessly—there's something magical about how complex systems emerge from simple components working in harmony.</p>
+                            <p>I thrive on challenges and get bored quickly with easy problems. While proficient in C#, my strong programming foundations allow me to adapt and pick up new languages as needed. I'm constantly exploring everything from cloud technologies and DevOps to new frameworks, driven by curiosity and a love for continuous learning.</p>
+                            <p>My 15+ years as a mechanic and shop supervisor, plus earlier construction experience, taught me systematic problem-solving and how to see the big picture while managing complex moving parts—skills that translate perfectly to software development and system architecture.</p>
+                            <p>When I'm not coding, I'm playing heavy metal guitar (recently got back into it after letting life get in the way) or gaming across all genres except sports and racing. Both challenge me in different ways and keep my problem-solving skills sharp.</p>
+                            <blockquote class="about-quote">I'm always open to new opportunities and connections. Whether you're interested in discussing a project or just having a conversation, feel free to reach out through my contact page.</blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <h2>Let's Connect</h2>
-        <p>Follow me:</p>
-        <div class="social-links">
-            <a href="https://github.com/logan-tolbert" target="_blank" class="social-btn">GitHub</a>
-            <a href="https://www.linkedin.com/in/logan-tolbert/" target="_blank" class="social-btn">LinkedIn</a>
-            <a href="https://x.com/lodev205" target="_blank" class="social-btn">Twitter</a>
+    <footer id="contact" class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h2 class="footer-title">Let's Connect</h2>
+                    <p class="footer-subtitle">
+                        Ready to collaborate or just want to say hello?
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/logan-tolbert" target="_blank" class="social-link">
+                            <span class="social-icon">📧</span>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/logan-tolbert/" target="_blank" class="social-link">
+                            <span class="social-icon">💼</span>
+                            LinkedIn
+                        </a>
+                        <a href="https://x.com/lodev205" target="_blank" class="social-link">
+                            <span class="social-icon">🐦</span>
+                            Twitter
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    &copy; <span id="current-year"></span> Logan Tolbert. All rights reserved.
+                </p>
+            </div>
         </div>
-        <small>&copy; 2025 Logan Tolbert. All rights reserved.</small>
     </footer>
 </body>
 

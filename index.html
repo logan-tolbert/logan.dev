@@ -1,121 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Logan Tolbert | Portfolio</title>
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Logan Tolbert | Portfolio">
-    <meta property="og:description"
-        content="Software developer skilled in C#, JavaScript, and web development. Passionate about coding, music, learning new things.">
-    <meta property="og:image" content="https://logan-tolbert.com/assets/images/preview.png">
-    <meta property="og:url" content="https:/logan-tolbert.com">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Logan Tolbert Personal Portfolio">
+    <meta property="og:title" content="Logan Tolbert | Portfolio" />
+    <meta
+      property="og:description"
+      content="Software developer skilled in C#, JavaScript, and web development. Passionate about coding, music, learning new things."
+    />
+    <meta
+      property="og:image"
+      content="https://logan-tolbert.com/assets/images/preview.png"
+    />
+    <meta property="og:url" content="https:/logan-tolbert.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Logan Tolbert Personal Portfolio" />
 
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Logan Tolbert | Portfolio">
-    <meta name="twitter:description"
-        content="Software developer skilled in C#, JavaScript, and web development. Passionate about coding, music, learning new things.">
-    <meta property="og:url" content="https:/logan-tolbert.com">
-    <meta name="twitter:image" content="https://logan-tolbert.com/assets/images/preview.png">
-    <meta name="twitter:site" content="@lodev205">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Logan Tolbert | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Software developer skilled in C#, JavaScript, and web development. Passionate about coding, music, learning new things."
+    />
+    <meta property="og:url" content="https:/logan-tolbert.com" />
+    <meta
+      name="twitter:image"
+      content="https://logan-tolbert.com/assets/images/preview.png"
+    />
+    <meta name="twitter:site" content="@lodev205" />
 
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
     <script defer src="./assets/scripts/script.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <div class="logo"><code>&lt;LoDev&gt;</code></div>
-            <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
-            <ul id="nav-links" class="hidden">
-                <!-- <li><a href="index.html">Home</a></li> -->
-                <li><a href="https://github.com/logan-tolbert?tab=repositories" target="_blank">Projects</a></li>
-                <li><a href="./pages/about.html">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo"><code>&lt;LoDev&gt;</code></div>
+          <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
+          <ul id="nav-links" class="nav-menu">
+            <li>
+              <a
+                href="https://github.com/logan-tolbert?tab=repositories"
+                target="_blank"
+                >Projects</a
+              >
+            </li>
+            <li><a href="./pages/about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Hi, I'm Logan</h1>
-                <p>Software Developer</p>
-                <div class="hero-buttons">
-                    <a href="projects.html" class="btn">View My Work</a>
-                    <a href="./assets/docs/resume.pdf" class="btn" download>Download Resume</a>
-                </div>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">
+                <span class="hero-greeting">Hi, I'm</span>
+                <span class="hero-name">Logan Tolbert</span>
+              </h1>
+              <p class="hero-subtitle">Software Developer</p>
+              <p class="hero-description">
+                Combining logic and creativity to build efficient, scalable
+                applications with C# and JavaScript.
+              </p>
+              <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a
+                  href="./assets/docs/resume.pdf"
+                  class="btn btn-secondary"
+                  download
+                  >Download Resume</a
+                >
+              </div>
             </div>
-        </section>
+            <div class="hero-visual">
+              <div class="hero-card">
+                <div class="code-snippet">
+                  <div class="code-header">
+                    <div class="code-dots">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <span class="code-title">about-me.js</span>
+                  </div>
+                  <div class="code-content">
+                    <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">'Logan Tolbert'</span>,
+  <span class="code-property">location</span>: <span class="code-string">'Birmingham, AL'</span>,
+  <span class="code-property">skills</span>: [<span class="code-string">'C#'</span>, <span class="code-string">'JavaScript'</span>, <span class="code-string">'SQL'</span>],
+  <span class="code-property">passion</span>: <span class="code-string">'Building great software'</span>,
+  <span class="code-property">currentFocus</span>: <span class="code-string">'Full-stack development'</span>
+};</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section class="about">
-            <h2>About Me</h2>
+      <!-- About -->
+      <section class="about">
+        <div class="about-container">
+          <div class="about-content">
             <div class="about-text">
-                <p>Combining logic and creativity, I focus on C# and JavaScript to develop efficient, scalable
-                    applications while expanding my knowledge across various technologies.</P>
+              <h2 class="section-title">About Me</h2>
+              <p class="about-description">
+                Combining logic and creativity, I focus on C# and JavaScript to
+                develop efficient, scalable applications while expanding my
+                knowledge across various technologies.
+              </p>
             </div>
-        </section>
-
-        <section class="skills">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>C#</li>
-                <li>.NET Core</li>
-                <li>JavaScript</li>
-                <li>HTML & CSS</li>
-                <li>SQL</li>
-                <li>Dapper</li>
-                <li>Python</li>
-                <li>Git & GitHub</li>
-            </ul>
-        </section>
-
-        <section class="projects">
-            <h2>Projects</h2>
-            <div class="project-list">
-                <div class="project-card">
-                    <a href="https://github.com/logan-tolbert/GuitaristsToolkit" target="_blank">
-                        <img src="./assets/images/gt-logo.svg" alt="Guitarist's Toolkit Logo">
-                        <p>Guitarist's Toolkit</p>
-                    </a>
-                </div>
-                <div class="project-card">
-                    <a href="https://github.com/logan-tolbert/GopherConnect" target="_blank">
-                        <img src="./assets/images/go-connect-menu.png" alt="Gopher Connect menu screenshot">
-                        <p>Gopher Connect</p>
-                    </a>
-                </div>
-                <div class="project-card" target="_blank">
-                    <a href="https://github.com/logan-tolbert/php-weather">
-                        <img src="./assets/images/php-weather.png" alt="Project 3 Screenshot">
-                        <p>PHP Weather</p>
-                    </a>
-                </div>
+            <div class="about-stats">
+              <div class="stat-card">
+                <div class="stat-number">2+</div>
+                <div class="stat-label">Years Learning</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Projects Built</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Technologies</div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="skills">
+        <div class="skills-container">
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3 class="category-title">Languages</h3>
+              <div class="skill-items">
+                <div class="skill-item">C#</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Python</div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3 class="category-title">Frameworks</h3>
+              <div class="skill-items">
+                <div class="skill-item">.NET Core</div>
+                <div class="skill-item">HTML & CSS</div>
+                <div class="skill-item">Dapper</div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3 class="category-title">Tools</h3>
+              <div class="skill-items">
+                <div class="skill-item">Git & GitHub</div>
+                <div class="skill-item">VS Code</div>
+                <div class="skill-item">SQL Server</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="projects">
+        <div class="projects-container">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="projects-grid">
+            <div class="project-card project-large">
+              <div class="project-image">
+                <img
+                  src="./assets/images/gt-logo.svg"
+                  alt="Guitarist's Toolkit Logo"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Guitarist's Toolkit</h3>
+                <p class="project-description">
+                  A comprehensive toolkit for guitarists with various utilities
+                  and tools.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">C#</span>
+                  <span class="tech-tag">.NET</span>
+                  <span class="tech-tag">WPF</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/logan-tolbert/GuitaristsToolkit"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="./assets/images/go-connect-menu.png"
+                  alt="Gopher Connect menu screenshot"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Gopher Connect</h3>
+                <p class="project-description">
+                  A modern networking application for connecting with other
+                  developers.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">HTML/CSS</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/logan-tolbert/GopherConnect"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="./assets/images/php-weather.png"
+                  alt="PHP Weather App Screenshot"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">PHP Weather</h3>
+                <p class="project-description">
+                  A weather application built with PHP and external API
+                  integration.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">API</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/logan-tolbert/php-weather"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <h2>Let's Connect</h2>
-        <p>Follow me:</p>
-        <div class="social-links">
-            <a href="https://github.com/logan-tolbert" target="_blank" class="social-btn">GitHub</a>
-            <a href="https://www.linkedin.com/in/logan-tolbert/" target="_blank" class="social-btn">LinkedIn</a>
-            <a href="https://x.com/lodev205" target="_blank" class="social-btn">Twitter</a>
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-main">
+            <h2 class="footer-title">Let's Connect</h2>
+            <p class="footer-subtitle">
+              Ready to collaborate or just want to say hello?
+            </p>
+            <div class="social-links">
+              <a
+                href="https://github.com/logan-tolbert"
+                target="_blank"
+                class="social-link"
+              >
+                <span class="social-icon">📧</span>
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/logan-tolbert/"
+                target="_blank"
+                class="social-link"
+              >
+                <span class="social-icon">💼</span>
+                LinkedIn
+              </a>
+              <a
+                href="https://x.com/lodev205"
+                target="_blank"
+                class="social-link"
+              >
+                <span class="social-icon">🐦</span>
+                Twitter
+              </a>
+            </div>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="current-year"></span> Logan Tolbert. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
