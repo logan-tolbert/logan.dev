@@ -242,8 +242,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-buttons {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .btn {
@@ -917,6 +918,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .nav-menu {
+    display: none;
     position: fixed;
     top: 4rem;
     left: 0;
@@ -932,6 +934,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .nav-menu.open {
+    display: flex;
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
@@ -939,16 +942,6 @@ h1, h2, h3, h4, h5, h6 {
   
   .hero-title {
     font-size: 2.5rem;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .btn {
-    width: 100%;
-    max-width: 300px;
   }
   
   .section-title {
@@ -981,6 +974,21 @@ h1, h2, h3, h4, h5, h6 {
   #theme-toggle {
     top: 4.5rem;
     right: 1rem;
+  }
+}
+
+/* --- Force hero button stacking only for mobile, with !important for all properties --- */
+@media (max-width: 600px) {
+  .hero-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1rem !important;
+  }
+  .hero-buttons .btn {
+    width: 100% !important;
+    max-width: 300px !important;
+    text-align: center !important;
   }
 }
 
@@ -1048,4 +1056,12 @@ h1, h2, h3, h4, h5, h6 {
   border: 4px solid var(--blue-dark);
   background: var(--blue-medium);
   box-shadow: 0 4px 16px var(--shadow-dark-light);
+}
+
+@media (max-width: 1030px) {
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
