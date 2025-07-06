@@ -63,7 +63,6 @@ body {
   color: var(--darkest-gray);
   line-height: 1.6;
   overflow-x: hidden;
-  transition: var(--transition);
 }
 
 /* TYPOGRAPHY */
