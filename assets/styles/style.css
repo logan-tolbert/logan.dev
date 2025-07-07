@@ -76,6 +76,41 @@ body {
   overflow-x: hidden;
 }
 
+/* Ensure containers don't exceed viewport */
+.hero-container,
+.about-container,
+.skills-container,
+.projects-container,
+.footer-container {
+  max-width: min(var(--container-max-width), 100vw);
+  margin: 0 auto;
+}
+
+/* Prevent specific elements from causing horizontal scroll */
+.hero-content,
+.hero-buttons,
+.hero-visual,
+.hero-card {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure consistent centering on mobile */
+@media (max-width: 768px) {
+  .hero-container,
+  .about-container,
+  .skills-container,
+  .projects-container,
+  .footer-container {
+    text-align: center;
+  }
+  
+  .hero-content {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /* Disable transitions during theme changes */
 body.theme-transitioning * {
   transition: none !important;
@@ -259,7 +294,9 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
+  width: 100%;
 }
 
 .btn {
@@ -384,18 +421,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-content {
-  display: grid;
-  grid-template-columns: 220px 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 3rem;
-  align-items: flex-start;
+  text-align: center;
 }
 
 .about-text {
-  max-width: 600px;
+  max-width: 800px;
+  width: 100%;
 }
 
 .about-text .section-title {
-  text-align: left;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -407,8 +446,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-stats {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .stat-card {
@@ -936,6 +978,14 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 8px 25px var(--shadow-pink-bright);
 }
 
+.dark-mode .contact {
+  background: var(--blue-medium);
+}
+
+.dark-mode .contact-description {
+  color: var(--blue-text);
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
   :root {
@@ -949,28 +999,28 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
   
+  .hero-text {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
   .hero-title {
     font-size: 3rem;
   }
   
   .about-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
+    gap: 2rem;
   }
   
-  .contact-layout {
+  .contact-content {
     grid-template-columns: 1fr;
     gap: 3rem;
-  }
-  
-  .about-text .section-title {
-    text-align: center;
   }
   
   .about-stats {
     flex-direction: row;
     justify-content: center;
+    gap: 1rem;
   }
   
   .project-large {
@@ -994,7 +1044,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 4rem;
     left: 0;
     right: 0;
-    background: var(--bg-primary);
+    background: var(--white);
     flex-direction: column;
     padding: 2rem;
     box-shadow: 0 4px 12px var(--shadow-medium);
@@ -1015,12 +1065,22 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.5rem;
   }
   
+  .hero-text {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .hero-buttons {
+    justify-content: center !important;
+  }
+  
   .section-title {
     font-size: 2rem;
   }
   
   .about-stats {
     flex-direction: column;
+    align-items: center;
   }
   
   .skills-grid {
@@ -1052,20 +1112,22 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* --- Force hero button stacking only for mobile, with !important for all properties --- */
+/* --- Additional mobile-specific styling --- */
 @media (max-width: 600px) {
-  .hero-buttons {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 1rem !important;
+  .hero-title {
+    font-size: 2rem !important;
   }
-  .hero-buttons .btn {
-    width: 100% !important;
-    max-width: 300px !important;
-    text-align: center !important;
+  
+  .hero-greeting {
+    font-size: 1.2rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem !important;
   }
 }
+
+
 
 /* Visual accent for section divider */
 .section-divider {
@@ -1141,15 +1203,63 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Fix hero buttons for tablets and mobile */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1rem !important;
+  }
+  
+  .hero-buttons .btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    text-align: center !important;
+  }
+  
+  .hero-text {
+    max-width: 100% !important;
+    text-align: center !important;
+    margin: 0 auto;
+  }
+  
+  .hero-card {
+    max-width: 100% !important;
+    margin: 0 auto;
+  }
+}
+
 .contact-form .btn {
   margin: 2rem 0;
 }
 
 /* CONTACT PAGE STYLES */
-.contact-layout {
+.contact {
+  padding: var(--section-spacing) 0;
+  background: var(--light-gray);
+}
+
+.contact-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.contact-content {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: flex-start;
+}
+
+.contact-info {
+  max-width: 100%;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  color: var(--darker-gray);
+  line-height: 1.8;
 }
 
 .form-group {
@@ -1251,3 +1361,83 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
+/* Small screens optimization - Clean approach using specificity */
+@media screen and (max-width: 400px) {
+  :root {
+    --container-padding: 0.75rem;
+  }
+  
+  /* Use higher specificity selectors instead of !important */
+  .hero .hero-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    text-align: center;
+  }
+  
+  .hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero .hero-text {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  .hero .hero-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .hero .hero-greeting {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .hero .hero-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .hero .hero-description {
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .hero .hero-buttons {
+    gap: 0.75rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero .hero-buttons .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    max-width: 250px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hero .hero-card {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* Other sections with higher specificity */
+  .about .about-container,
+  .contact .contact-container,
+  .skills .skills-container,
+  .projects .projects-container,
+  .footer .footer-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    text-align: center;
+  }
+}
