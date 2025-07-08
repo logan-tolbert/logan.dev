@@ -1,0 +1,142 @@
+@import './base.css';
+
+/* CONTACT PAGE */
+.contact {
+  background: var(--blue-medium);
+}
+
+.contact-form-wrapper {
+  padding: 2rem;
+}
+
+.contact-form .btn {
+  margin: 2rem auto;
+  display: block;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contact-info {
+  max-width: 100%;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  color: var(--blue-text);
+  line-height: 1.8;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Contact Form */
+.form-input {
+  padding: 0.75rem;
+  border: 1px solid var(--blue-lighter);
+  border-radius: var(--button-radius);
+  font-family: inherit;
+  font-size: inherit;
+  background: var(--white);
+  transition: var(--transition);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--pink-bright);
+  box-shadow: 0 0 0 2px var(--shadow-pink-bright);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-email-link {
+  color: var(--pink-bright);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-email-link:hover {
+  color: var(--pink-bright-light);
+}
+
+.contact-social-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* CONTACT SUCCESS PAGE */
+.success-section {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.success-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.success-title {
+  margin-bottom: 1.5rem;
+}
+
+.success-description {
+  margin-bottom: 2rem;
+}
+
+.success-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-social-links {
+    align-items: center;      
+    justify-content: center; 
+  }
+  .contact-social-links .social-link {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .success-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .success-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+  
