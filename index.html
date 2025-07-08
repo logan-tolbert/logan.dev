@@ -40,7 +40,9 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/styles/base.css" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+
     <script defer src="./assets/scripts/script.js"></script>
   </head>
 
@@ -65,12 +67,12 @@
       </nav>
     </header>
 
-    <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+
 
     <main>
       <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero-container">
+      <section class="hero section">
+        <div class="hero-container container">
           <div class="hero-content">
             <div class="hero-text">
               <h1 class="hero-title">
@@ -118,8 +120,8 @@
       </section>
 
       <!-- About -->
-      <section class="about">
-        <div class="about-container">
+      <section class="about section">
+        <div class="about-container container">
           <div class="about-content">
             <div class="about-text">
               <h2 class="section-title">About Me</h2>
@@ -128,15 +130,15 @@
               </p>
             </div>
             <div class="about-stats">
-              <div class="stat-card">
+              <div class="stat-card card">
                 <div class="stat-number">1.5+</div>
                 <div class="stat-label">Years Learning</div>
               </div>
-              <div class="stat-card">
+              <div class="stat-card card">
                 <div class="stat-number">5+</div>
                 <div class="stat-label">Projects Built</div>
               </div>
-              <div class="stat-card">
+              <div class="stat-card card">
                 <div class="stat-number">8+</div>
                 <div class="stat-label">Technologies</div>
               </div>
@@ -146,46 +148,46 @@
       </section>
 
       <!-- Skills -->
-      <section class="skills">
-        <div class="skills-container">
+      <section class="skills section">
+        <div class="skills-container container">
           <h2 class="section-title">Technical Skills</h2>
           <div class="skills-grid">
-            <div class="skill-category">
+            <div class="skill-category card">
               <h3 class="category-title">Languages</h3>
               <div class="skill-items">
-                <div class="skill-item">C#</div>
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">TypeScript</div>
-                <div class="skill-item">SQL</div>
-                <div class="skill-item">Python</div>
-                <div class="skill-item">Go</div>
-                <div class="skill-item">PHP</div>
-                <div class="skill-item">HTML & CSS</div>
+                <div class="skill-item tag tag-primary">C#</div>
+                <div class="skill-item tag tag-primary">JavaScript</div>
+                <div class="skill-item tag tag-primary">TypeScript</div>
+                <div class="skill-item tag tag-primary">SQL</div>
+                <div class="skill-item tag tag-primary">Python</div>
+                <div class="skill-item tag tag-primary">Go</div>
+                <div class="skill-item tag tag-primary">PHP</div>
+                <div class="skill-item tag tag-primary">HTML & CSS</div>
               </div>
             </div>
-            <div class="skill-category">
+            <div class="skill-category card">
               <h3 class="category-title">Frameworks</h3>
               <div class="skill-items">
-                <div class="skill-item">.NET</div>
-                <div class="skill-item">ASP.NET Core</div>
-                <div class="skill-item">EF Core</div>
-                <div class="skill-item">Dapper</div>  
-                <div class="skill-item">React</div>
-                <div class="skill-item">Vue.js</div>
-                <div class="skill-item">Node.js</div> 
+                <div class="skill-item tag tag-primary">.NET</div>
+                <div class="skill-item tag tag-primary">ASP.NET Core</div>
+                <div class="skill-item tag tag-primary">EF Core</div>
+                <div class="skill-item tag tag-primary">Dapper</div>  
+                <div class="skill-item tag tag-primary">React</div>
+                <div class="skill-item tag tag-primary">Vue.js</div>
+                <div class="skill-item tag tag-primary">Node.js</div> 
               </div>
             </div>
-            <div class="skill-category">
+            <div class="skill-category card">
               <h3 class="category-title">Tools & Platforms</h3>
               <div class="skill-items">
-                <div class="skill-item">Git & GitHub</div>
-                <div class="skill-item">VS Code</div>
-                <div class="skill-item">SQL Server</div>
-                <div class="skill-item">MySQL</div>
-                <div class="skill-item">PostgreSQL</div>
-                <div class="skill-item">Azure</div>
-                <div class="skill-item">Google Cloud</div>
-                <div class="skill-item">Docker</div>
+                <div class="skill-item tag tag-primary">Git & GitHub</div>
+                <div class="skill-item tag tag-primary">VS Code</div>
+                <div class="skill-item tag tag-primary">SQL Server</div>
+                <div class="skill-item tag tag-primary">MySQL</div>
+                <div class="skill-item tag tag-primary">PostgreSQL</div>
+                <div class="skill-item tag tag-primary">Azure</div>
+                <div class="skill-item tag tag-primary">Google Cloud</div>
+                <div class="skill-item tag tag-primary">Docker</div>
               </div>
             </div>
           </div>
@@ -193,11 +195,11 @@
       </section>
 
       <!-- Projects -->
-      <section class="projects">
-        <div class="projects-container">
+      <section class="projects section">
+        <div class="projects-container container">
           <h2 class="section-title">Featured Projects</h2>
           <div class="projects-grid">
-            <div class="project-card project-large">
+            <div class="project-card card project-large">
               <div class="project-image">
                 <img
                   src="./assets/images/gt-logo.svg"
@@ -211,9 +213,9 @@
                   and tools.
                 </p>
                 <div class="project-tech">
-                  <span class="tech-tag">C#</span>
-                  <span class="tech-tag">ASP.NET Core</span>
-                  <span class="tech-tag">Dapper</span>
+                  <span class="tech-tag tag tag-secondary">C#</span>
+                  <span class="tech-tag tag tag-secondary">ASP.NET Core</span>
+                  <span class="tech-tag tag tag-secondary">Dapper</span>
                 </div>
                 <div class="project-links">
                   <a
@@ -227,7 +229,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card card">
               <div class="project-image">
                 <img
                   src="./assets/images/go-connect-menu.png"
@@ -241,9 +243,9 @@
                   developers.
                 </p>
                 <div class="project-tech">
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">Node.js</span>
-                  <span class="tech-tag">HTML/CSS</span>
+                  <span class="tech-tag tag tag-secondary">JavaScript</span>
+                  <span class="tech-tag tag tag-secondary">Node.js</span>
+                  <span class="tech-tag tag tag-secondary">HTML/CSS</span>
                 </div>
                 <div class="project-links">
                   <a
@@ -257,7 +259,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card card">
               <div class="project-image">
                 <img
                   src="./assets/images/php-weather.png"
@@ -271,9 +273,9 @@
                   integration.
                 </p>
                 <div class="project-tech">
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">API</span>
-                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag tag tag-secondary">PHP</span>
+                  <span class="tech-tag tag tag-secondary">API</span>
+                  <span class="tech-tag tag tag-secondary">JavaScript</span>
                 </div>
                 <div class="project-links">
                   <a
@@ -293,7 +295,7 @@
 
     <!-- Footer -->
     <footer id="contact" class="footer">
-      <div class="footer-container">
+      <div class="footer-container container">
         <div class="footer-content">
           <div class="footer-main">
             <h2 class="footer-title">Let's Connect</h2>

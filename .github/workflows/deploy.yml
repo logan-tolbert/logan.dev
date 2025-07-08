@@ -55,8 +55,12 @@ jobs:
       
       - name: Minify CSS
         run: |
-          cleancss -o dist/assets/styles/style.css assets/styles/style.css
-          echo "✅ CSS minified successfully"
+          cleancss -o dist/assets/styles/base.css assets/styles/base.css
+          cleancss -o dist/assets/styles/index.css assets/styles/index.css
+          cleancss -o dist/assets/styles/about.css assets/styles/about.css
+          cleancss -o dist/assets/styles/contact.css assets/styles/contact.css
+          
+          echo "✅ All CSS files minified successfully"
       
       - name: Optimize images
         run: |

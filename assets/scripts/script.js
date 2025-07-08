@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
-    const themeToggle = document.getElementById("theme-toggle");
     const currentYear = document.getElementById("current-year");
     const body = document.body;
+    const root = document.documentElement;
 
     // Toggle mobile menu
     menuToggle.addEventListener("click", function () {
@@ -31,31 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Load dark mode preference
-    if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-        themeToggle.textContent = "🌞";
-    }
 
-    // Toggle dark mode
-    themeToggle.addEventListener("click", () => {
-        // Temporarily disable transitions
-        body.classList.add("theme-transitioning");
-        
-        body.classList.toggle("dark-mode");
-        if (body.classList.contains("dark-mode")) {
-            themeToggle.textContent = "🌞";
-            localStorage.setItem("theme", "dark");
-        } else {
-            themeToggle.textContent = "🌙";
-            localStorage.setItem("theme", "light");
-        }
-        
-        // Re-enable transitions after a short delay
-        setTimeout(() => {
-            body.classList.remove("theme-transitioning");
-        }, 100);
-    });
 
     // Add scroll effect to navigation
     let lastScrollY = window.scrollY;
