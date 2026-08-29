@@ -1,343 +1,281 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logan Tolbert | Portfolio</title>
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Logan Tolbert | Portfolio" />
-    <meta
-      property="og:description"
-      content="Software developer skilled in C#, JavaScript, and web development. Passionate about coding, music, learning new things."
-    />
-    <meta
-      property="og:image"
-      content="https://logan-tolbert.com/assets/images/preview.png"
-    />
-    <meta property="og:url" content="https:/logan-tolbert.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Logan Tolbert Personal Portfolio" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logan Tolbert | Portfolio</title>
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Logan Tolbert | Portfolio" />
-    <meta
-      name="twitter:description"
-      content="Software developer skilled in C#, JavaScript, and web development. Passionate about coding, music, learning new things."
-    />
-    <meta property="og:url" content="https:/logan-tolbert.com" />
-    <meta
-      name="twitter:image"
-      content="https://logan-tolbert.com/assets/images/preview.png"
-    />
-    <meta name="twitter:site" content="@lodev205" />
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Logan Tolbert | Portfolio" />
+  <meta property="og:description"
+    content="C#/.NET software developer at Nimble Technologies building cross-platform and backend applications with maintainable design and structured APIs." />
+  <meta property="og:image" content="https://logan-tolbert.com/assets/images/preview.png" />
+  <meta property="og:url" content="https:/logan-tolbert.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Logan Tolbert Personal Portfolio" />
 
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/styles/tokens.css" />
-    <link rel="stylesheet" href="./assets/styles/components.css" />
-    <link rel="stylesheet" href="./assets/styles/index.css" />
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Logan Tolbert | Portfolio" />
+  <meta name="twitter:description"
+    content="C#/.NET software developer at Nimble Technologies building cross-platform and backend applications with maintainable design and structured APIs." />
+  <meta property="og:url" content="https:/logan-tolbert.com" />
+  <meta name="twitter:image" content="https://logan-tolbert.com/assets/images/preview.png" />
+  <meta name="twitter:site" content="@lodev205" />
 
-    <script defer src="./assets/scripts/script.js"></script>
-  </head>
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/styles/tokens.css" />
+  <link rel="stylesheet" href="./assets/styles/components.css" />
+  <link rel="stylesheet" href="./assets/styles/index.css" />
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="nav-container">
-          <div class="logo"><code>&lt;LoDev&gt;</code></div>
-          <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
-          <ul id="nav-links" class="nav-menu">
-            <li>
-              <a
-                href="https://github.com/logan-tolbert?tab=repositories"
-                target="_blank"
-                >Projects</a
-              >
-            </li>
-            <li><a href="./pages/about.html">About</a></li>
-            <li><a href="./pages/contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+  <script defer src="./assets/scripts/script.js"></script>
+</head>
 
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo"><code>&lt;LoDev&gt;</code></div>
+        <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
+        <ul id="nav-links" class="nav-menu">
+          <li>
+            <a href="https://github.com/logan-tolbert?tab=repositories" target="_blank">Projects</a>
+          </li>
+          <li><a href="./pages/about.html">About</a></li>
+          <li><a href="./pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-
-    <main>
-      <!-- Hero Section -->
-      <section class="hero section">
-        <div class="hero-container container">
-          <div class="hero-content">
-            <div class="hero-text">
-              <h1 class="hero-title">
-                <span class="hero-greeting">Hi, I'm</span>
-                <span class="hero-name">Logan Tolbert</span>
-              </h1>
-              <p class="hero-subtitle">Full-stack Engineer</p>
-              <p class="hero-description">
-                Thriving on complex challenges - turning intricate problems into elegant solutions.
-              </p>
-              <div class="hero-buttons">
-                <a href="#projects" class="btn">View My Work</a>
-                <a
-                  href="./assets/docs/resume.pdf"
-                  class="btn"
-                  download
-                  >Download Resume</a
-                >
-              </div>
-            </div>
-            <div class="hero-visual">
-              <div class="hero-card">
-                <div class="code-snippet">
-                  <div class="code-header">
-                    <div class="code-dots">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <span class="code-title">about-me.js</span>
-                  </div>
-                  <div class="code-content">
-                    <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
-  <span class="code-property">name</span>: <span class="code-string">'Logan Tolbert'</span>,
-  <span class="code-property">location</span>: <span class="code-string">'Birmingham, AL'</span>,
-  <span class="code-property">skills</span>: [<span class="code-string">'C#'</span>, <span class="code-string">'JavaScript'</span>, <span class="code-string">'SQL'</span>],
-  <span class="code-property">passion</span>: <span class="code-string">'Building great software'</span>,
-};</code></pre>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- About -->
-      <section class="about section">
-        <div class="about-container container">
-          <div class="about-content">
-            <div class="about-text">
-              <h2 class="section-title">About Me</h2>
-              <p class="about-description">
-                Combining logic and creativity, I love making complex systems work together seamlessly. Full-stack developer specializing in C# and JavaScript, with a passion for turning intricate challenges into elegant solutions.
-              </p>
-            </div>
-            <div class="about-stats">
-              <div class="stat-card card">
-                <div class="stat-number">1.5+</div>
-                <div class="stat-label">Years Learning</div>
-              </div>
-              <div class="stat-card card">
-                <div class="stat-number">5+</div>
-                <div class="stat-label">Projects Built</div>
-              </div>
-              <div class="stat-card card">
-                <div class="stat-number">8+</div>
-                <div class="stat-label">Technologies</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section class="skills section">
-        <div class="skills-container container">
-          <h2 class="section-title">Technical Skills</h2>
-          <div class="skills-grid">
-            <div class="skill-category card">
-              <h3 class="category-title">Languages</h3>
-              <div class="skill-items">
-                <div class="skill-item tag tag-primary">C#</div>
-                <div class="skill-item tag tag-primary">JavaScript</div>
-                <div class="skill-item tag tag-primary">TypeScript</div>
-                <div class="skill-item tag tag-primary">SQL</div>
-                <div class="skill-item tag tag-primary">Python</div>
-                <div class="skill-item tag tag-primary">Go</div>
-                <div class="skill-item tag tag-primary">PHP</div>
-                <div class="skill-item tag tag-primary">HTML & CSS</div>
-              </div>
-            </div>
-            <div class="skill-category card">
-              <h3 class="category-title">Frameworks</h3>
-              <div class="skill-items">
-                <div class="skill-item tag tag-primary">.NET</div>
-                <div class="skill-item tag tag-primary">ASP.NET Core</div>
-                <div class="skill-item tag tag-primary">EF Core</div>
-                <div class="skill-item tag tag-primary">Dapper</div>  
-                <div class="skill-item tag tag-primary">React</div>
-                <div class="skill-item tag tag-primary">Vue.js</div>
-                <div class="skill-item tag tag-primary">Node.js</div> 
-              </div>
-            </div>
-            <div class="skill-category card">
-              <h3 class="category-title">Tools & Platforms</h3>
-              <div class="skill-items">
-                <div class="skill-item tag tag-primary">Git & GitHub</div>
-                <div class="skill-item tag tag-primary">VS Code</div>
-                <div class="skill-item tag tag-primary">SQL Server</div>
-                <div class="skill-item tag tag-primary">MySQL</div>
-                <div class="skill-item tag tag-primary">PostgreSQL</div>
-                <div class="skill-item tag tag-primary">Azure</div>
-                <div class="skill-item tag tag-primary">Google Cloud</div>
-                <div class="skill-item tag tag-primary">Docker</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects -->
-      <section class="projects section">
-        <div class="projects-container container">
-          <h2 class="section-title">Featured Projects</h2>
-          <div class="projects-grid">
-            <div class="project-card card project-large">
-              <div class="project-image">
-                <img
-                  src="./assets/images/gt-logo.svg"
-                  alt="Guitarist's Toolkit Logo"
-                />
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">Guitarist's Toolkit</h3>
-                <p class="project-description">
-                  A comprehensive toolkit for guitarists with various utilities
-                  and tools.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag tag tag-secondary">C#</span>
-                  <span class="tech-tag tag tag-secondary">ASP.NET Core</span>
-                  <span class="tech-tag tag tag-secondary">Dapper</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/logan-tolbert/GuitaristsToolkit"
-                    target="_blank"
-                    class="project-link"
-                  >
-                    View Code
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-card card">
-              <div class="project-image">
-                <img
-                  src="./assets/images/go-connect-menu.png"
-                  alt="Gopher Connect menu screenshot"
-                />
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">Gopher Connect</h3>
-                <p class="project-description">
-                  A modern networking application for connecting with other
-                  developers.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag tag tag-secondary">JavaScript</span>
-                  <span class="tech-tag tag tag-secondary">Node.js</span>
-                  <span class="tech-tag tag tag-secondary">HTML/CSS</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/logan-tolbert/GopherConnect"
-                    target="_blank"
-                    class="project-link"
-                  >
-                    View Code
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-card card">
-              <div class="project-image">
-                <img
-                  src="./assets/images/php-weather.png"
-                  alt="PHP Weather App Screenshot"
-                />
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">PHP Weather</h3>
-                <p class="project-description">
-                  A weather application built with PHP and external API
-                  integration.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag tag tag-secondary">PHP</span>
-                  <span class="tech-tag tag tag-secondary">API</span>
-                  <span class="tech-tag tag tag-secondary">JavaScript</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/logan-tolbert/php-weather"
-                    target="_blank"
-                    class="project-link"
-                  >
-                    View Code
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer id="contact" class="footer">
-      <div class="footer-container container">
-        <div class="footer-content">
-          <div class="footer-main">
-            <h2 class="footer-title">Let's Connect</h2>
-            <p class="footer-subtitle">
-              Ready to collaborate or just want to say hello?
+  <main>
+    <!-- Hero Section -->
+    <section class="hero section">
+      <div class="hero-container container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <p class="eyebrow hero-eyebrow">Logan Tolbert</p>
+            <h1 class="hero-title">C# & .NET Developer</h1>
+            <p class="hero-subtitle">
+              Software Developer at Nimble Technologies
             </p>
-            <div class="social-links">
-              <a
-                href="https://github.com/logan-tolbert"
-                target="_blank"
-                class="social-link"
-              >
-                <span class="social-icon"><img src="./assets/images/icons8-github.png" alt="GitHub Logo" /></span>
-                GitHub
-              </a>
-              <a
-                href="https://www.linkedin.com/in/logan-tolbert/"
-                target="_blank"
-                class="social-link"
-              >
-                <span class="social-icon"><img src="./assets/images/icons8-linkedin.png" alt="LinkedIn Logo" /></span>
-                LinkedIn
-              </a>
-              <a
-                href="https://x.com/lodev205"
-                target="_blank"
-                class="social-link"
-              >
-                <span class="social-icon"><img src="./assets/images/icons8-x.png" alt="X Logo" /></span>
-                Twitter
-              </a>
+            <p class="hero-description">
+              Building cross-platform and backend applications with a focus on
+              maintainable architecture, structured APIs, and developer
+              tooling.
+            </p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn">View Projects</a>
+              <a href="./assets/docs/resume.pdf" class="btn" download>Download Resume</a>
             </div>
           </div>
-        </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; <span id="current-year"></span> Logan Tolbert. All rights
-            reserved.
-          </p>
+          <div class="hero-visual">
+            <div class="status-card">
+              <div class="status-card-header">
+                <span class="status-dot"></span>
+                <span class="status-dot-title">System Status</span>
+              </div>
+              <div class="status-rows">
+                <div class="status-row">
+                  <span class="status-row-label">ROLE</span>
+                  <span class="status-row-value">Software Developer</span>
+                </div>
+                <div class="status-row">
+                  <span class="status-row-label">COMPANY</span>
+                  <span class="status-row-value">Nimble Technologies</span>
+                </div>
+                <div class="status-row">
+                  <span class="status-row-label">LOCATION</span>
+                  <span class="status-row-value">Birmingham, AL</span>
+                </div>
+                <div class="status-row">
+                  <span class="status-row-label">STACK</span>
+                  <span class="status-row-value">C# · .NET · MAUI · SQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section">
+      <div class="about-container container">
+        <div class="about-content">
+          <div class="about-text">
+            <p class="eyebrow section-eyebrow">Background</p>
+            <h2 class="section-title">About Me</h2>
+            <p class="about-description">
+              I work primarily with C#, .NET, and SQL, building cross-platform
+              applications and structured APIs. I focus on maintainable design
+              patterns, clean validation, and systems that are reliable to run
+              and straightforward to maintain. When I'm not at my desk, I'm
+              usually playing guitar or working on audio and music-related
+              software projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section">
+      <div class="skills-container container">
+        <h2 class="section-title">Technical Focus</h2>
+        <div class="skills-grid">
+          <div class="skill-category card">
+            <h3 class="category-title">Languages</h3>
+            <div class="skill-items">
+              <div class="skill-item tag tag-primary">C#</div>
+              <div class="skill-item tag tag-primary">SQL</div>
+              <div class="skill-item tag tag-primary">TypeScript</div>
+              <div class="skill-item tag tag-primary">JavaScript</div>
+            </div>
+          </div>
+          <div class="skill-category card">
+            <h3 class="category-title">Frameworks &amp; Libraries</h3>
+            <div class="skill-items">
+              <div class="skill-item tag tag-primary">.NET</div>
+              <div class="skill-item tag tag-primary">ASP.NET Core</div>
+              <div class="skill-item tag tag-primary">.NET MAUI</div>
+              <div class="skill-item tag tag-primary">EF Core</div>
+              <div class="skill-item tag tag-primary">Dapper</div>
+              <div class="skill-item tag tag-primary">xUnit</div>
+            </div>
+          </div>
+          <div class="skill-category card">
+            <h3 class="category-title">Tools &amp; Infrastructure</h3>
+            <div class="skill-items">
+              <div class="skill-item tag tag-primary">Git</div>
+              <div class="skill-item tag tag-primary">Docker</div>
+              <div class="skill-item tag tag-primary">SQL Server</div>
+              <div class="skill-item tag tag-primary">PostgreSQL</div>
+              <div class="skill-item tag tag-primary">SQLite</div>
+              <div class="skill-item tag tag-primary">Azure</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects section">
+      <div class="projects-container container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card card project-large">
+            <div class="project-image">
+              <img src="./assets/images/gt-logo.svg" alt="Guitarist's Toolkit Logo" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Guitarist's Toolkit</h3>
+              <p class="project-description">
+                A comprehensive toolkit for guitarists with various utilities
+                and tools.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag tag tag-secondary">C#</span>
+                <span class="tech-tag tag tag-secondary">ASP.NET Core</span>
+                <span class="tech-tag tag tag-secondary">Dapper</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/logan-tolbert/GuitaristsToolkit" target="_blank" class="project-link">
+                  View Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card card">
+            <div class="project-image">
+              <img src="./assets/images/go-connect-menu.png" alt="Gopher Connect menu screenshot" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Gopher Connect</h3>
+              <p class="project-description">
+                A modern networking application for connecting with other
+                developers.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag tag tag-secondary">JavaScript</span>
+                <span class="tech-tag tag tag-secondary">Node.js</span>
+                <span class="tech-tag tag tag-secondary">HTML/CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/logan-tolbert/GopherConnect" target="_blank" class="project-link">
+                  View Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card card">
+            <div class="project-image">
+              <img src="./assets/images/php-weather.png" alt="PHP Weather App Screenshot" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">PHP Weather</h3>
+              <p class="project-description">
+                A weather application built with PHP and external API
+                integration.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag tag tag-secondary">PHP</span>
+                <span class="tech-tag tag tag-secondary">API</span>
+                <span class="tech-tag tag tag-secondary">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/logan-tolbert/php-weather" target="_blank" class="project-link">
+                  View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="footer-container container">
+      <div class="footer-content">
+        <div class="footer-main">
+          <h2 class="footer-title">Let's Connect</h2>
+          <p class="footer-subtitle">
+            Ready to collaborate or just want to say hello?
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/logan-tolbert" target="_blank" class="social-link">
+              <span class="social-icon"><img src="./assets/images/icons8-github.png" alt="GitHub Logo" /></span>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/logan-tolbert/" target="_blank" class="social-link">
+              <span class="social-icon"><img src="./assets/images/icons8-linkedin.png" alt="LinkedIn Logo" /></span>
+              LinkedIn
+            </a>
+            <a href="https://x.com/lodev205" target="_blank" class="social-link">
+              <span class="social-icon"><img src="./assets/images/icons8-x.png" alt="X Logo" /></span>
+              Twitter
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year"></span> Logan Tolbert. All rights
+          reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

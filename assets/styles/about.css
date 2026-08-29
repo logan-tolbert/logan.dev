@@ -1,11 +1,11 @@
 .about {
-  background: var(--blue-medium);
+  background: var(--surface-raised);
 }
 
 .about-content {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 4rem;
+  gap: var(--space-9);
   align-items: flex-start;
   max-width: 900px;
   margin: 0 auto;
@@ -22,23 +22,27 @@
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 4px 16px var(--shadow-dark-light);
-  border: 4px solid var(--blue-dark);
-  background: var(--blue-medium);
+  box-shadow: var(--shadow-sm);
+  border: 4px solid var(--surface-bg);
+  background: var(--surface-raised);
 }
 
 .about-text {
   max-width: 100%;
 }
 
+.about-text .section-eyebrow {
+  margin-bottom: var(--space-3);
+}
+
 .about-description {
-  font-size: 1.1rem;
-  color: var(--blue-text);
+  font-size: var(--text-lg);
+  color: var(--text-muted);
   line-height: 1.8;
 }
 
 .about-description p {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-6);
 }
 
 .about-description p:last-of-type {
@@ -48,40 +52,39 @@
 .section-divider {
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, var(--pink), var(--pink-light));
+  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
   border-radius: var(--small-radius);
-  margin: 0 auto 2.5rem auto;
+  margin: 0 auto var(--space-9) auto;
 }
 
 .about-quote {
-  margin: 2.5rem 0 0 0;
-  padding: 1.25rem 2rem;
-  background: var(--blue-medium);
-  border-left: 4px solid var(--pink-bright);
+  margin: var(--space-9) 0 0 0;
+  padding: var(--space-5) var(--space-7);
+  background: var(--surface-raised);
+  border-left: 4px solid var(--accent);
   font-style: italic;
-  color: var(--blue-text);
+  color: var(--text-muted);
   border-radius: var(--button-radius);
-  box-shadow: 0 2px 8px var(--shadow-dark-light);
+  box-shadow: var(--shadow-sm);
 }
-
 
 /* Media Queries */
 @media (max-width: 900px) {
   .about-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: var(--space-7);
     text-align: center;
   }
-  
+
   .about-photo {
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-6);
   }
-  
+
   .profile-img {
     margin: 0 auto;
   }
-  
+
   .about-text {
     text-align: left;
   }
@@ -89,19 +92,19 @@
 
 @media (max-width: 768px) {
   .about-content {
-    gap: 1.5rem;
+    gap: var(--space-6);
   }
-  
+
   .profile-img {
     width: 150px;
     height: 150px;
   }
-  
+
   .about-description {
-    font-size: 1rem;
+    font-size: var(--text-base);
   }
-  
+
   .section-divider {
-    margin: 0 auto 2rem auto;
+    margin: 0 auto var(--space-7) auto;
   }
 }
